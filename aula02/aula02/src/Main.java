@@ -1,13 +1,22 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted tex
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        int i1 = 5;
+
+        int[] numeros = new int[i1];
+
+        numeros[0] = 10;
+        numeros[1] = 5;
+        numeros[2] = 5;
+        numeros[3] = 5;
+        numeros[4] = 15;
+
+        int total = 0;
+        for (int i = 0; i < i1; i++) {
+            System.out.println("i = " + numeros[i]);
+            total += numeros[i];
+
         }
+        System.out.println("A média dos elementos é: " + total / i1);
     }
 }
