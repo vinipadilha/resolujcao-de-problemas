@@ -1,23 +1,26 @@
- public class Pilha{
+import java.util.Scanner;
+
+public class Pilha{
         private int capacidade;
         private int topo;
-        private int dados[];
+        private char dados[];
 
         public Pilha(){
             capacidade = 10;
-            dados =  new int[capacidade];
+            dados =  new char[capacidade];
             topo = -1;
         }
 
-        public void insere(int num){
+        public void insere(char caracter){
             topo++;
-            dados[topo] = num;
+            dados[topo] = caracter;
         }
-        public int Remove(){
-            int num;
-            num = dados[topo];
+
+        public char Remove(){
+            char caracter;
+            caracter = dados[topo];
             topo--;
-            return num;
+            return caracter;
         }
 
         public boolean cheia(){
@@ -40,11 +43,13 @@
         }
 
         public static void main(String[] args) {
-            Pilha pilha = new Pilha();
 
-            pilha.insere(10);
-            pilha.insere(20);
-            pilha.insere(30);
+            Scanner sc = new Scanner(System.in);
+
+            System.out.print("Insira a expressão: ");
+            String expressao = sc.nextLine();
+
+            Pilha pilha = new Pilha();
 
             pilha.imprime();
 
@@ -52,4 +57,7 @@
 
             pilha.imprime();
         }
+
+
+
 }
