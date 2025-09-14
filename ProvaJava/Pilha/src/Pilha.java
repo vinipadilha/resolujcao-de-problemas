@@ -8,8 +8,20 @@ public class Pilha {
         if (cheia()){
             System.out.println("Pilha Cheia!");
         } else {
-            topo = topo ++;
+            topo++;
             dados[topo] = valor;
+            System.out.println("Inserido: " + valor);
+        }
+    }
+
+    public int Remove(){
+        if (Vazia()){
+            System.out.println("Pilha Vazia!");
+            return -1;
+        } else {
+            int valor = dados[topo];
+            topo = topo --;
+            return valor;
         }
     }
 
