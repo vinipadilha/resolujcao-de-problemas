@@ -4,11 +4,20 @@ public class Pilha {
     private int capacidade;
 
 
+    public void Insere(int valor){
+        if (cheia()){
+            System.out.println("Pilha Cheia!");
+        } else {
+            topo = topo ++;
+            dados[topo] = valor;
+        }
+    }
+
     public boolean cheia(){
         return topo == capacidade - 1;
     }
 
-    public boolean vazia(){
+    public boolean Vazia(){
         return topo == -1;
     }
 }
