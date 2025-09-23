@@ -4,4 +4,7 @@ public class Pilha {
     private int capacidade;
 
 
+    public boolean vazia(){
+        return topo == -1;
+    }
 }
