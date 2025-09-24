@@ -10,7 +10,7 @@ public class Fila {
         this.primeiro = 0;
         this.ultimo = -1;
         this.quantidade = 0;
-        this.dados = new int[capacidade]
+        this.dados = new int[capacidade];
     }
 
     public boolean vazia(){
@@ -20,5 +20,18 @@ public class Fila {
     public boolean cheia(){
         return quantidade == capacidade;
     }
+
+    public void Insere(int valor){
+        if(cheia()){
+            System.out.println("Pilha Cheia!");
+        } else {
+            ultimo = valor;
+            dados[ultimo] = valor;
+            quantidade++;
+            System.out.println("Inserido: " + valor);
+        }
+    }
+
+
 
 }
