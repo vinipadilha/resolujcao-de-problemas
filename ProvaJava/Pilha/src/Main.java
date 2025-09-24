@@ -13,8 +13,8 @@ public class Main {
 
         pilha.insere(40);
         pilha.insere(50);
-        pilha.insere(60); // aqui enche a pilha
-        pilha.insere(70); // vai dar erro
+        pilha.insere(60);
+        pilha.insere(70);
 
         pilha.imprime();
     }
