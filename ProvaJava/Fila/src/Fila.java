@@ -25,10 +25,22 @@ public class Fila {
         if(cheia()){
             System.out.println("Pilha Cheia!");
         } else {
-            ultimo = valor;
+            ultimo = (ultimo + 1) % capacidade;
             dados[ultimo] = valor;
             quantidade++;
             System.out.println("Inserido: " + valor);
+        }
+    }
+
+    public int remove(){
+        if(vazia()){
+            System.out.println("Pilha Vazia!");
+            return -1;
+        }else{
+            int valor = dados[primeiro];
+            primeiro = (primeiro + 1) % capacidade;
+            quantidade--;
+            return valor;
         }
     }
 
